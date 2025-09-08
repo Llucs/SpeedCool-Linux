@@ -109,7 +109,7 @@ Example config keys include temperature thresholds, battery levels, CPU load lim
 ## Author
 
 Llucs (SpeedCool Dev)  
-Build date: 07/09/2025
+Project start date: 08/09/25
 
 ***
 
