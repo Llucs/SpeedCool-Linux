@@ -1,4 +1,4 @@
-# ⚡ SpeedCool Linux
+# ⚡ SpeedCool Linux (WIP)
 
 **SpeedCool Linux** — Intelligent system optimizer for Linux desktop and laptop.  
 The successor of the legendary SpeedCool Magisk Module for Android, now on Linux.
