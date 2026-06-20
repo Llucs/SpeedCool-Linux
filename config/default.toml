@@ -1,0 +1,36 @@
+[daemon]
+poll_interval_ms = 2000
+log_level = "info"
+auto_update = true
+
+[thresholds]
+cpu_temp_critical = 85.0
+cpu_temp_warn = 70.0
+gpu_temp_critical = 85.0
+battery_pct_low = 20.0
+cpu_load_high = 80.0
+cpu_load_low = 20.0
+
+[profiles.eco]
+cpu_governor = "powersave"
+turbo_enabled = false
+epp = "power"
+swappiness = 10
+io_scheduler = "kyber"
+gpu_power_level = "low"
+
+[profiles.balanced]
+cpu_governor = "schedutil"
+turbo_enabled = true
+epp = "balance_performance"
+swappiness = 60
+io_scheduler = "mq-deadline"
+gpu_power_level = "auto"
+
+[profiles.performance]
+cpu_governor = "performance"
+turbo_enabled = true
+epp = "performance"
+swappiness = 10
+io_scheduler = "none"
+gpu_power_level = "high"

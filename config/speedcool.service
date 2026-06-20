@@ -1,0 +1,23 @@
+[Unit]
+Description=SpeedCool Linux — Performance Optimizer
+Documentation=https://github.com/Llucs/SpeedCool-Linux
+After=multi-user.target
+
+[Service]
+Type=simple
+ExecStart=/usr/local/bin/speedcool daemon
+Restart=on-failure
+RestartSec=5
+CPUAccounting=yes
+MemoryAccounting=yes
+TasksAccounting=yes
+ProtectSystem=strict
+ProtectHome=read-only
+ReadWritePaths=/var/lib/speedcool /run/speedcool
+PrivateTmp=yes
+NoNewPrivileges=yes
+CapabilityBoundingSet=~CAP_SYS_ADMIN CAP_NET_ADMIN CAP_SYS_NICE
+AmbientCapabilities=CAP_SYS_ADMIN CAP_NET_ADMIN CAP_SYS_NICE
+
+[Install]
+WantedBy=multi-user.target
